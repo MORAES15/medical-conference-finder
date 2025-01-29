@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ConferenceScraperForm } from "@/components/ConferenceScraperForm";
-import { ConferenceTable, type Conference } from "@/components/ConferenceTable";
+import { ConferenceTable } from "@/components/ConferenceTable";
+import { Conference } from "@/types/conference";
 import { useToast } from "@/components/ui/use-toast";
 import { Progress } from "@/components/ui/progress";
 
@@ -21,7 +22,8 @@ const Index = () => {
         month: "Março",
         day: "15",
         year: "2025",
-        url: "https://example.com/congresso1"
+        url: "https://example.com/congresso1",
+        categories: []
       },
       {
         name: "Simpósio Sul-Brasileiro de Saúde",
@@ -29,7 +31,8 @@ const Index = () => {
         month: "Maio",
         day: "22",
         year: "2025",
-        url: "https://example.com/simposio1"
+        url: "https://example.com/simposio1",
+        categories: []
       },
       {
         name: "Encontro Médico do Paraná",
@@ -37,7 +40,8 @@ const Index = () => {
         month: "Julho",
         day: "10",
         year: "2025",
-        url: "https://example.com/encontro1"
+        url: "https://example.com/encontro1",
+        categories: []
       }
     ];
 
