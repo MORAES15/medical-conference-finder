@@ -74,29 +74,29 @@ export const ConferenceTable = ({ conferences }: ConferenceTableProps) => {
     <div className="backdrop-blur-md bg-glass rounded-lg border border-glass-light p-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold text-white">Resultados da Busca</h2>
-        <Button onClick={exportToExcel} className="bg-accent hover:bg-accent-hover">
+        <Button onClick={exportToExcel} className="bg-accent hover:bg-accent-hover transition-colors">
           <Download className="mr-2 h-4 w-4" />
           Exportar para Excel
         </Button>
       </div>
-      <div className="rounded-md border border-glass-light">
+      <div className="rounded-md border border-glass-light overflow-hidden">
         <Table>
           <TableHeader>
-            <TableRow className="bg-glass-dark">
+            <TableRow className="bg-glass-dark hover:bg-glass-dark">
               <TableHead 
-                className="text-gray-200 cursor-pointer hover:text-white"
+                className="text-gray-200 cursor-pointer hover:text-white transition-colors"
                 onClick={() => handleSort("name")}
               >
                 Nome {sortField === "name" && (sortDirection === "asc" ? "↑" : "↓")}
               </TableHead>
               <TableHead 
-                className="text-gray-200 cursor-pointer hover:text-white"
+                className="text-gray-200 cursor-pointer hover:text-white transition-colors"
                 onClick={() => handleSort("location")}
               >
                 Local {sortField === "location" && (sortDirection === "asc" ? "↑" : "↓")}
               </TableHead>
               <TableHead 
-                className="text-gray-200 cursor-pointer hover:text-white"
+                className="text-gray-200 cursor-pointer hover:text-white transition-colors"
                 onClick={() => handleSort("date")}
               >
                 Data {sortField === "date" && (sortDirection === "asc" ? "↑" : "↓")}
@@ -118,7 +118,7 @@ export const ConferenceTable = ({ conferences }: ConferenceTableProps) => {
                       href={conference.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-accent hover:text-accent-hover inline-flex items-center"
+                      className="text-accent hover:text-accent-hover transition-colors inline-flex items-center"
                     >
                       <ExternalLink className="h-4 w-4" />
                     </a>

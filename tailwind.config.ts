@@ -25,13 +25,13 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         glass: {
-          DEFAULT: "rgba(17, 25, 40, 0.75)",
+          DEFAULT: "rgba(0, 51, 102, 0.75)",
           light: "rgba(255, 255, 255, 0.1)",
-          dark: "rgba(0, 0, 0, 0.2)",
+          dark: "rgba(0, 25, 51, 0.2)",
         },
         accent: {
-          DEFAULT: "#6D28D9",
-          hover: "#5B21B6",
+          DEFAULT: "#003366",
+          hover: "#004080",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -75,10 +75,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "tag-fade-in": {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        "tag-fade-out": {
+          "0%": { opacity: "1", transform: "scale(1)" },
+          "100%": { opacity: "0", transform: "scale(0.95)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "tag-enter": "tag-fade-in 0.2s ease-out",
+        "tag-exit": "tag-fade-out 0.2s ease-out",
       },
     },
   },

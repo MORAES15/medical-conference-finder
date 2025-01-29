@@ -30,6 +30,14 @@ const Index = () => {
         day: "22",
         year: "2025",
         url: "https://example.com/simposio1"
+      },
+      {
+        name: "Encontro Médico do Paraná",
+        location: "Curitiba, PR",
+        month: "Julho",
+        day: "10",
+        year: "2025",
+        url: "https://example.com/encontro1"
       }
     ];
 
@@ -47,7 +55,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#001933] to-[#003366]">
       <div className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold text-white mb-8 text-center">
           Buscador de Congressos Médicos
@@ -63,7 +71,7 @@ const Index = () => {
               <Progress value={progress} className="w-full" />
             </div>
           )}
-          <ConferenceTable conferences={conferences} />
+          {conferences.length > 0 && <ConferenceTable conferences={conferences} />}
         </div>
       </div>
     </div>
